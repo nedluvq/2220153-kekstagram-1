@@ -1,6 +1,6 @@
 function randomNumber(from,to) {
   if(from < 0 || to < 0) {
-    return "Одна из границ отрицательная"
+    return "Одна из границ отрицательная";
   }
   if(from > to) {
     return Math.random(to,from);
@@ -10,9 +10,9 @@ function randomNumber(from,to) {
 
 function checkStringLength(checkingString,maxLength ) {
   if(checkingString.length <= maxLength ) {
-    return true
+    return true;
   }else{
-    return false
+    return false;
   }
 }
 
