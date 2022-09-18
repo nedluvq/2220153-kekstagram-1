@@ -18,3 +18,4 @@ function checkStringLength(checkingString,maxLength ) {
 
 randomNumber(1,100);
 checkStringLength('123',123);
+checkStringLength('121231332',123);
