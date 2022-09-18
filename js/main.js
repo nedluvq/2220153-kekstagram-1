@@ -15,3 +15,6 @@ function checkStringLength(checkingString,maxLength ) {
     return false
   }
 }
+
+randomNumber(1,100);
+checkStringLength('123',123);
