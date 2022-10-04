@@ -10,10 +10,6 @@ function checkStringLength (checkingString, maxLength) {
 
 }
 
-const generateArray = (length, max) => (
-  [...new Array(length)]
-    .map(() => Math.round(Math.random() * max)));
-
 const MESSAGES = [
   'Всё отлично!',
   'Неплохо, но не все'
@@ -25,22 +21,19 @@ const NAMES = [
   'Александр'
 ];
 
-const photosId = generateArray(25,25);
-const usersId = generateArray(25,25);
+let photosId = 0;
+let usersId = 0;
+
 const photos = {};
 const comments = {};
 
 function getId () {
-  const temp = usersId[getRandomPositiveInteger(0,usersId.length-1)];
-  delete(usersId[getRandomPositiveInteger(0,usersId.length-1)]);
-  return temp;
+  return usersId++;
 }
 
 
 function getPicId () {
-  const temp = photosId[getRandomPositiveInteger(0,photosId.length-1)];
-  delete(photosId[getRandomPositiveInteger(0,photosId.length-1)]);
-  return temp;
+  return photosId++;
 }
 
 // eslint-disable-next-line no-unused-vars
@@ -61,15 +54,15 @@ const photoInfo = {
 
 checkStringLength('123123',2313);
 
-for(let i = 0; i <= 25;i++) {
-  photos.push({
+for (let i = 0; i <= 25;i++) {
+  photos[i] = ({
     id: getPicId(),
     url: `photos/${getPicId()}.jpg`,
     description: 'Описание фотографии',
     likes: `Количество лайков: ${getRandomPositiveInteger(15, 200)}`,
     comments: MESSAGES[getRandomPositiveInteger(0, 1)]
   });
-  comments.push({
+  comments[i] = ({
     id: getId(),
     avatar: `img/avatar-${ getRandomPositiveInteger(0, 5) }.svg`,
     message: MESSAGES[getRandomPositiveInteger(0, 1)],
