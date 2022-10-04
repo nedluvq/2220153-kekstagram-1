@@ -31,30 +31,11 @@ function getId () {
   return usersId++;
 }
 
-
 function getPicId () {
   return photosId++;
 }
 
-// eslint-disable-next-line no-unused-vars
-const comment = {
-  id: getId(),
-  avatar: `img/avatar-${ getRandomPositiveInteger(0, 5) }.svg`,
-  message: MESSAGES[getRandomPositiveInteger(0, 1)],
-  name: NAMES[getRandomPositiveInteger(0,NAMES.length-1)]
-};
-// eslint-disable-next-line no-unused-vars
-const photoInfo = {
-  id: getPicId(),
-  url: `photos/${getPicId()}.jpg`,
-  description: 'Описание фотографии',
-  likes: `Количество лайков: ${getRandomPositiveInteger(15, 200)}`,
-  comments: MESSAGES[getRandomPositiveInteger(0, 1)]
-};
-
-checkStringLength('123123',2313);
-
-for (let i = 0; i <= 25;i++) {
+for (let i = 0; i <= 24;i++) {
   photos[i] = ({
     id: getPicId(),
     url: `photos/${getPicId()}.jpg`,
@@ -62,6 +43,7 @@ for (let i = 0; i <= 25;i++) {
     likes: `Количество лайков: ${getRandomPositiveInteger(15, 200)}`,
     comments: MESSAGES[getRandomPositiveInteger(0, 1)]
   });
+
   comments[i] = ({
     id: getId(),
     avatar: `img/avatar-${ getRandomPositiveInteger(0, 5) }.svg`,
@@ -69,3 +51,5 @@ for (let i = 0; i <= 25;i++) {
     name: NAMES[getRandomPositiveInteger(0,NAMES.length-1)]
   });
 }
+
+checkStringLength('123123',2313);
