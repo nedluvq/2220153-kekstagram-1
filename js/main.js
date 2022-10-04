@@ -5,6 +5,7 @@ function getRandomPositiveInteger (a, b) {
   return Math.floor(result);
 }
 
+// eslint-disable-next-line no-unused-vars
 function checkStringLength (checkingString, maxLength) {
   return checkingString.length <= maxLength;
 
@@ -52,4 +53,4 @@ for (let i = 0; i <= 24; i++) {
   });
 }
 
-checkStringLength('123123', 2313);
+
