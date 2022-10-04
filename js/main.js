@@ -48,7 +48,7 @@ const comment = {
   message: MESSAGES[getRandomPositiveInteger(0, 1)],
   name: NAMES[getRandomPositiveInteger(0,NAMES.length-1)]
 };
-
+// eslint-disable-next-line no-unused-vars
 const photoInfo = {
   id: getPicId(),
   url: `photos/${getPicId()}.jpg`,
