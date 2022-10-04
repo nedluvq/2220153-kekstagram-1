@@ -39,7 +39,7 @@ function getPicId () {
   const temp = photosId[getRandomPositiveInteger(0,photosId.length-1)];
   delete(photosId[getRandomPositiveInteger(0,photosId.length-1)]);
   return temp;
-};
+}
 
 
 const comment = {
@@ -57,6 +57,4 @@ const photoInfo = {
   comments: MESSAGES[getRandomPositiveInteger(0, 1)]
 };
 
-console.log(photoInfo);
-console.log(comment)
 checkStringLength('123123',2313);
