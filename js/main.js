@@ -41,7 +41,7 @@ function getPicId () {
   return temp;
 }
 
-
+// eslint-disable-next-line no-unused-vars
 const comment = {
   id: getId(),
   avatar: `img/avatar-${ getRandomPositiveInteger(0, 5) }.svg`,
