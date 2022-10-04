@@ -35,10 +35,10 @@ function getPicId () {
   return photosId++;
 }
 
-for (let i = 0; i <= 24;i++) {
+for (let i = 0; i <= 24; i++) {
   photos[i] = ({
     id: getPicId(),
-    url: `photos/${getPicId()}.jpg`,
+    url: `photos/${ getPicId() }.jpg`,
     description: 'Описание фотографии',
     likes: `Количество лайков: ${getRandomPositiveInteger(15, 200)}`,
     comments: MESSAGES[getRandomPositiveInteger(0, 1)]
@@ -48,8 +48,8 @@ for (let i = 0; i <= 24;i++) {
     id: getId(),
     avatar: `img/avatar-${ getRandomPositiveInteger(0, 5) }.svg`,
     message: MESSAGES[getRandomPositiveInteger(0, 1)],
-    name: NAMES[getRandomPositiveInteger(0,NAMES.length-1)]
+    name: NAMES[getRandomPositiveInteger(0, NAMES.length-1)]
   });
 }
 
-checkStringLength('123123',2313);
+checkStringLength('123123', 2313);
