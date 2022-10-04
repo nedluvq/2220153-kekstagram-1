@@ -25,10 +25,10 @@ const NAMES = [
   'Александр'
 ];
 
-let photosId = generateArray(25,25);
-let usersId = generateArray(25,25);
-let photos = {};
-let comments = {};
+const photosId = generateArray(25,25);
+const usersId = generateArray(25,25);
+const photos = {};
+const comments = {};
 
 function getId () {
   const temp = usersId[getRandomPositiveInteger(0,usersId.length-1)];
@@ -68,11 +68,11 @@ for(let i = 0; i <= 25;i++) {
     description: 'Описание фотографии',
     likes: `Количество лайков: ${getRandomPositiveInteger(15, 200)}`,
     comments: MESSAGES[getRandomPositiveInteger(0, 1)]
-  })
+  });
   comments.push({
     id: getId(),
     avatar: `img/avatar-${ getRandomPositiveInteger(0, 5) }.svg`,
     message: MESSAGES[getRandomPositiveInteger(0, 1)],
     name: NAMES[getRandomPositiveInteger(0,NAMES.length-1)]
-  })
+  });
 }
