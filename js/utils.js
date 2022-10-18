@@ -10,13 +10,19 @@ function checkStringLength (checkingString, maxLength) {
 
 }
 
-function getId (usersId) {
+function getUserId (usersId) {
+  if (usersId === 0) {
+    return 0;
+  }
   return usersId - 1;
 }
 
 
 function getPicId (photosId) {
+  if (photosId === 0) {
+    return 0
+  }
   return photosId - 1
 }
 
-export {getRandomPositiveInteger, checkStringLength,getId, getPicId}
+export {getRandomPositiveInteger, checkStringLength,getUserId, getPicId}
