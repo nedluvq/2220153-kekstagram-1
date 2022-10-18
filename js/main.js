@@ -1,8 +1,7 @@
-import getRandomPositiveInteger from "func.js"
 // eslint-disable-next-line no-unused-vars
-import checkStringLength from "func.js"
-import getId from "func.js"
-import getPicId from "func.js"
+import {getRandomPositiveInteger, checkStringLength, getId,getPicId} from "./utils.js"
+
+
 
 const MESSAGES = [
   'Всё отлично!',
