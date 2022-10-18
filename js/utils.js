@@ -18,3 +18,5 @@ function getId (usersId) {
 function getPicId (photosId) {
   return photosId - 1
 }
+
+export {getRandomPositiveInteger, checkStringLength,getId, getPicId}
