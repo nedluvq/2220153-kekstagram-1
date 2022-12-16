@@ -1,3 +1,22 @@
+const DELAY = 500;
+const getNonExistenObject = (existingObjects, min, max) => {
+  let id = getRandomInteger(min, max);
+  while (existingObjects.includes(id)){
+    id = getRandomInteger(min, max);
+  }
+  existingObjects.push(id);
+  return id;
+};
+
+const keyIsEscape = (evt) => evt.key === 'Escape';
+const debounce = (callback, timeoutDelay = DELAY) => {
+  let timeoutId;
+  return (...rest) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => callback.apply(this, rest), timeoutDelay);
+  };
+};
+
 function getRandomPositiveInteger (a, b) {
   const lower = Math.ceil(Math.min(Math.abs(a), Math.abs(b)));
   const upper = Math.floor(Math.max(Math.abs(a), Math.abs(b)));
@@ -5,24 +24,11 @@ function getRandomPositiveInteger (a, b) {
   return Math.floor(result);
 }
 
-function checkStringLength (checkingString, maxLength) {
-  return checkingString.length <= maxLength;
-
-}
-
-function getUserId (usersId) {
-  if (usersId === 0) {
-    return 0;
+function shuffle(array) {
+  array = array.slice();
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
   }
-  return usersId - 1;
+  return array;
 }
-
-
-function getPicId (photosId) {
-  if (photosId === 0) {
-    return 0
-  }
-  return photosId - 1
-}
-
-export {getRandomPositiveInteger, checkStringLength,getUserId, getPicId}
